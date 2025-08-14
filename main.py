@@ -31,3 +31,34 @@ def delete_contact(name):
         print(f"Contact with name: {name} deleted successfully")
     else:
         print(f"No contact found with name: {name}")
+        
+# Add simple menu for user interaction
+while True:
+    print("\nContact Book menu:")
+    print("1. Add contact")
+    print("2. view contacts")
+    print("3. Search contact")
+    print("4. Delete contact")
+    print("5. Exit")
+    
+    choice = input("Enter Your Choice:")
+    
+    if choice == '1':
+        name = input ("Enter name: ")
+        phone = input("Enter phone: ")
+        email = input("Enter email: ")
+        add_contact(name, phone, email)
+        
+    elif choice == '2':
+        view_contacts()
+    elif choice == '3':
+        name = input("Enter name to search: ")
+        search_contact(name)
+    elif choice == '4':
+        name = input("Enter name to delete: ")
+        delete_contact(name)
+    elif choice == '5':
+        print("Exiting the contact book. Goodbye!")
+        break
+    else:
+        print("Invalid choice. Please try again.")
