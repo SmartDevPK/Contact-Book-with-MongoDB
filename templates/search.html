@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Result</title>
+</head>
+<body>
+    <h1>Search Result for "{{ name }}"</h1>
+
+    {% if contact %}
+        <p>Name: {{ contact.name }}</p>
+        <p>Phone: {{ contact.phone }}</p>
+        <p>Email: {{ contact.email }}</p>
+    {% else %}
+        <p>No contact found with this name.</p>
+    {% endif %}
+
+    <a href="/">Back to Contact Book</a>
+</body>
+</html>
